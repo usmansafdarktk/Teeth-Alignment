@@ -1,0 +1,9 @@
+tqdm
+requests
+googledrivedownloader
+opencv-python
+scipy
+tensorflow-cpu
+protobuf
+numpy
+pillow
