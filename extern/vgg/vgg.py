@@ -26,7 +26,7 @@ def vgg_19(inputs, reuse=False, pooling='max', final_endpoint='fc8'):
 
     pooling_fns = {'avg': slim.avg_pool2d, 'max': slim.max_pool2d}
     pooling_fn = pooling_fns[pooling]
-    with tf.variable_scope('vgg_19', [inputs], reuse=tf.AUTO_REUSE):
+    with tf.variable_scope('vgg_19', [inputs], reuse=tf.compat.v1.AUTO_REUSE):
         # cause the default value of reuse in the slim functions or the customs' functions
         # is None, then its value depends on the high level's reuse value
         end_points = {}

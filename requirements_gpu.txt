@@ -1,0 +1,13 @@
+# Requirements for GPU systems (local machine with CUDA)
+# Note: Ensure CUDA and cuDNN are installed on your system first
+
+tqdm
+requests
+googledrivedownloader
+opencv-python
+scipy
+tensorflow>=2.16.0  # Auto-detects GPU if available
+tf-slim  # Required for VGG network
+protobuf
+numpy<2.0  # For TF 2.x compatibility
+pillow

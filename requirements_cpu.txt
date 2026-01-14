@@ -3,7 +3,8 @@ requests
 googledrivedownloader
 opencv-python
 scipy
-tensorflow-cpu
+tensorflow-cpu>=2.16.0  # CPU-only version, auto-detects in TF 2.x
+tf-slim  # Required for VGG network
 protobuf
-numpy
+numpy<2.0  # For TF 2.x compatibility
 pillow

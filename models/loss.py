@@ -6,7 +6,7 @@ from extern.vgg.vgg import vgg_19
 
 def content_loss(gt_end_points, renderer_end_points, weights):
 
-    total_content_loss = np.float32(0.0)
+    total_content_loss = np.float32(0.0) if hasattr(np, 'float32') else float(0.0)
     content_loss_dict = {}
 
     for name, weight in weights.items():

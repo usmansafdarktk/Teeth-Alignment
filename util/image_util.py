@@ -43,10 +43,10 @@ class Augmentor(object):
             imgs, labels = self.random_flip(imgs, labels)
 
         imgs.set_shape(i_shape)
-        imgs = tf.stop_gradient(tf.to_float(imgs))
+        imgs = tf.stop_gradient(tf.cast(imgs, tf.float32))
 
         labels.set_shape(l_shape)
-        labels = tf.stop_gradient(tf.to_float(labels))
+        labels = tf.stop_gradient(tf.cast(labels, tf.float32))
 
         return imgs, labels
 
@@ -109,7 +109,7 @@ class Augmentor(object):
             label = tf.image.crop_to_bounding_box(label, height // 4, width // 4, height, width)
 
             if self.label_clip:
-                label = tf.to_float(label > 0.6)
+                label = tf.cast(label > 0.6, tf.float32)
 
             return (img, label)
 

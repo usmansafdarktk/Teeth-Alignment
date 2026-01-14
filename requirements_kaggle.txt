@@ -1,0 +1,14 @@
+# Requirements for Kaggle/Colab (with GPU support)
+# Note: TensorFlow and many basic packages are pre-installed on Kaggle/Colab
+
+# Core dependencies
+googledrivedownloader
+tf-slim
+
+# Optional - these are usually pre-installed but specified for completeness
+tqdm
+requests
+opencv-python
+scipy
+pillow
+numpy<2.0  # For compatibility with TensorFlow 2.x
