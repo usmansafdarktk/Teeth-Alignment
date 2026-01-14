@@ -1,0 +1,22 @@
+# Requirements for SAM2 Integration
+# Use this if you want to generate masks automatically
+
+# SAM2 installation (from GitHub)
+# Install with: pip install git+https://github.com/facebookresearch/segment-anything-2.git
+
+# Core dependencies for iOrthoPredictor
+googledrivedownloader
+tf-slim
+opencv-python
+numpy<2.0
+pillow
+
+# PyTorch (for SAM2) - will be auto-installed with SAM2
+# torch>=2.0.0
+# torchvision
+
+# Optional for Kaggle/Colab
+tqdm
+requests
+scipy
+matplotlib
